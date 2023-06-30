@@ -1,6 +1,6 @@
 function pigLatin(userPhrase) {
   const vowels = ["a", "e", "i", "o", "u"];
-  const phraseWithoutPunctuation = userPhrase.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").trim();
+  const phraseWithoutPunctuation = userPhrase.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").trim().toLowerCase();
   const phraseArr = phraseWithoutPunctuation.split(" ");
   const pigLatinArr = [];
   phraseArr.forEach((word) => {
@@ -16,7 +16,14 @@ function pigLatin(userPhrase) {
         if (!vowels.includes(wordArr[i])) {
           consonants += wordArr[i];
         } else {
-          firstVowelIndex = i;
+          // Solve for "qu" consonants rule
+          if (wordArr[i] === "u" && wordArr[i - 1] === "q") {
+            firstVowelIndex = i + 1;
+            consonants += wordArr[i];
+            break;
+          } else {
+            firstVowelIndex = i;
+          }
           break;
         }
       }
@@ -31,6 +38,5 @@ window.addEventListener("load", () => {
     e.preventDefault();
     const phraseToTranslate = document.querySelector("#user-phrase").value;
     document.querySelector("#pig-latin-display").innerText = pigLatin(phraseToTranslate);
-    document.querySelector("#user-phrase").value = "";
   })
 });
