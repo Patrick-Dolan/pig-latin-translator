@@ -24,6 +24,12 @@ Expected Output: "away"
 ```
 
 ```
+Test: "It will remove punctuation from the string"
+Code: pigLatin("a!")
+Expected Output: "away"
+```
+
+```
 Test: "It will move all consecutive consonants at the beginning of the word to the end of that word and add 'ay'"
 Code: pigLatin("practice")
 Expected Output: "acticepray"
