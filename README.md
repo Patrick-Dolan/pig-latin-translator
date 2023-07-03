@@ -4,8 +4,8 @@
 
 #### _A web app that translates english phrases and words into pig latin._  
 
-<!-- ## Github Pages Link -->
-<!-- [Link name](Link here) -->
+## Github Pages Link
+[Pig Latin Translator (LIVE)](https://patrick-dolan.github.io/pig-latin-translator/)
 
 ## Technologies Used
 * Bootstrap
