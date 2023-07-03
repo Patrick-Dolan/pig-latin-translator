@@ -1,4 +1,5 @@
 // Business Logic
+// =================================
 
 function pigLatin(userPhrase) {
   const vowels = ["a", "e", "i", "o", "u"];
@@ -36,6 +37,7 @@ function pigLatin(userPhrase) {
 }
 
 // UI Logic
+// =================================
 
 function createAndDisplayPigLatinCard(inputPhrase, pigLatinPhrase) {
   // Set up card body
@@ -49,23 +51,23 @@ function createAndDisplayPigLatinCard(inputPhrase, pigLatinPhrase) {
   let inputCardTitle = document.createElement("h4");
   inputCardTitle.classList.add("card-title");
   inputCardTitle.innerText = "Input phrase:";
-  let piglatinCardTitle = document.createElement("h4");
-  piglatinCardTitle.classList.add("card-title");
-  piglatinCardTitle.innerText = "Pig latin:";
+  let pigLatinCardTitle = document.createElement("h4");
+  pigLatinCardTitle.classList.add("card-title");
+  pigLatinCardTitle.innerText = "Pig latin:";
 
   // Set up card text
   let inputCardText = document.createElement("p");
   inputCardText.classList.add("card-text");
   inputCardText.innerText = inputPhrase;
-  let piglatinCardText = document.createElement("p");
-  piglatinCardText.classList.add("card-text");
-  piglatinCardText.innerText = pigLatinPhrase;
+  let pigLatinCardText = document.createElement("p");
+  pigLatinCardText.classList.add("card-text");
+  pigLatinCardText.innerText = pigLatinPhrase;
 
   // Set up card
   cardBody.appendChild(inputCardTitle);
   cardBody.appendChild(inputCardText);
-  cardBody.appendChild(piglatinCardTitle);
-  cardBody.appendChild(piglatinCardText);
+  cardBody.appendChild(pigLatinCardTitle);
+  cardBody.appendChild(pigLatinCardText);
   card.appendChild(cardBody);
 
   // Prepend card to dom
