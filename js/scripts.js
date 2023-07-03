@@ -17,14 +17,14 @@ function pigLatin(userPhrase) {
           consonants += wordArr[i];
         } else {
           // Solve for "qu" consonants rule
-          if (wordArr[i] === "u" && wordArr[i - 1] === "q") {
+          if (wordArr[i - 1] === "q" && wordArr[i] === "u") {
             firstVowelIndex = i + 1;
             consonants += wordArr[i];
             break;
           } else {
             firstVowelIndex = i;
+            break;
           }
-          break;
         }
       }
       pigLatinArr.push(word.slice(firstVowelIndex, word.length) + consonants + "ay");
