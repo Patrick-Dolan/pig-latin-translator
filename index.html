@@ -13,13 +13,12 @@
   <form id="phrase-form">
     <div class="form-group">
       <label for="user-phrase">Type a phrase or word you want translated to pig latin:</label><br />
-      <textarea name="user-phrase" id="user-phrase" class="form-control"></textarea>
+      <textarea name="user-phrase" id="user-phrase" class="form-control" required></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Translate</button>
   </form>
   <div class="mt-3">
-    <p>Result:</p>
-    <p><span id="pig-latin-display"></span></p>
+    <div id="pig-latin-display"></div>
   </div>
 </body>
 </html>
